@@ -11,7 +11,8 @@ import androidx.compose.ui.Modifier
 fun WelcomeGreeting(
     modifier: Modifier = Modifier,
     greetingTitle: String = "Welcome",
-    greetingSubtitle: String = "To get started, select a vendor or scan."
+    greetingSubtitle: String = "To get started, select a vendor or scan.",
+    onProfileClick: () -> Unit = {}
 ) {
     Row(
         modifier = modifier.fillMaxWidth(),
@@ -22,6 +23,6 @@ fun WelcomeGreeting(
             title = greetingTitle,
             subtitle = greetingSubtitle
         )
-        ProfileIcon()
+        ProfileIcon(onClick = onProfileClick)
     }
 } 
